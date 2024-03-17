@@ -13,12 +13,17 @@ let next_button = document.querySelector('#next_btn');
 let winner_container= document.querySelector('.winner_container')
 let play_again_winner_btn =document.querySelector('.play_again_winner');
 
-// if (!localStorage.getItem('pc_count')) {
-//     localStorage.setItem('pc_count', '0');
-// }
-// if (!localStorage.getItem('user_count')) {
-//     localStorage.setItem('user_count', '0');
-// }
+pcScore.innerHTML= Number(localStorage.pc_count);
+userScore.innerHTML= Number(localStorage.user_count);
+
+if (!localStorage.getItem('pc_count')) {
+    localStorage.setItem('pc_count', '0');
+}
+if (!localStorage.getItem('user_count')) {
+    localStorage.setItem('user_count', '0');
+}
+
+
 
 /*--------------------------------- displaying user score and PC score------------------------------------- */
 
