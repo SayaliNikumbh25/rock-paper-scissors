@@ -15,8 +15,6 @@ let play_again_winner_btn =document.querySelector('.play_again_winner');
 
 
 /*--------------------------------- displaying user score and PC score------------------------------------- */
-pcScore.innerText=Number(localStorage.pc_count);
-userScore.innerText=Number(localStorage.user_count);
 
 
 const CHOICES= [
@@ -98,7 +96,7 @@ function winner(choice,pc_choice){
         document.querySelector('.winner_heading').innerHTML = '<h2 class="result_text">you lost</h2><h3>against PC</h3>';
         localStorage.pc_count= Number(localStorage.pc_count)+1;
         pcScore.innerHTML = Number(localStorage.pc_count);
-        
+        console.log(Number(localStorage.pc_count));
         result_button[1].classList.add('winner'); 
         result_button[0].classList.remove('winner');
         removeNextButton();
@@ -108,6 +106,7 @@ function winner(choice,pc_choice){
         document.querySelector('.winner_heading').innerHTML = '<h2 class="result_text">you win</h2><h3>against PC</h3>';
         localStorage.user_count=Number(localStorage.user_count)+1;
         userScore.innerHTML = Number(localStorage.user_count);
+        console.log(Number(localStorage.pc_count));
         result_button[0].classList.add('winner');
         result_button[1].classList.remove('winner'); 
         addNextButton();
