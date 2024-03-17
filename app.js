@@ -13,8 +13,12 @@ let next_button = document.querySelector('#next_btn');
 let winner_container= document.querySelector('.winner_container')
 let play_again_winner_btn =document.querySelector('.play_again_winner');
 
-localStorage.setItem('pc_count', 0);
-localStorage.setItem('user_count', 0);
+if (!localStorage.getItem('pc_count')) {
+    localStorage.setItem('pc_count', '0');
+}
+if (!localStorage.getItem('user_count')) {
+    localStorage.setItem('user_count', '0');
+}
 
 /*--------------------------------- displaying user score and PC score------------------------------------- */
 
