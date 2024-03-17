@@ -34,7 +34,7 @@ body{
 }
 
 .score,
-span {
+.score h4 {
   margin: 0px;
   background-color: white;
 }
@@ -42,7 +42,7 @@ span {
   display: flex;
 }
 
-span {
+.score h4 {
   font-size: 3rem;
 }
 
