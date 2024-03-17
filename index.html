@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header_container">
+            <h2>ROCK <br> PAPER <br> SCISSORS</h2>
+            <div  class="display_score">
+                <div>
+                    <h4 class="score">COMPUTER <BR> SCORE </h4>
+                        <span class="pc_score">0</span>
+                </div>
+                <div>
+                    <h4 class="score">YOUR <BR> SCORE </h4>
+                        <span class="user_score">0</span>
+                </div>           
+            </div>
+        </header>  
+
+        <section class="game_container ">
+            <button class="choice_btn" data-choice="rock">
+                <div class="outer_background rock_background_color shadow">
+                    <div class="choice innerShadow ">
+                        <img src="./images/rock.png" alt="rock">
+                    </div>  
+                </div>       
+            </button>
+            
+            <button class="choice_btn " data-choice="scissors">
+                <div class="outer_background scissors_background_color shadow">
+                    <div class="choice innerShadow ">
+                        <img src="./images/scissors.png" alt="scissors">
+                    </div>  
+                </div>    
+            </button>
+            <button class="choice_btn" data-choice="paper">
+                <div class="outer_background paper_background_color shadow ">
+                    <div class="choice innerShadow">
+                        <img src="./images/paper.png" alt="paper">
+                    </div> 
+                </div>     
+            </button>    
+        </section>
+    </div>
+
+    <section class="result_container hidden">
+
+        <div class="display_result">
+            <h2 class="result_heading">You Picked</h2>
+            <div class="results_result">you_picked</div>
+        </div>
+        <div class="display_winner">
+            <div class="winner_heading">
+                <h2 class="result_text">you win</h2>
+                <h3>against PC</h3>    
+            </div>   
+            <button class="play_again play_again_btn">PLAY AGAIN</button>
+        </div>
+        <div class="display_result">
+            <h2 class="result_heading">PC Picked</h2>
+            <div class="results_result">PC_picked</div>
+        </div>
+        
+        
+    </section>
+
+    <section class="winner_container hidden ">
+        <div class="background_container">
+            <div>
+                <img src="./images/winner.png" alt="trophy image">
+            </div>
+        </div>
+        <h1>hurray!!</h1>
+        <h3>YOU WON THE GAME</h3>
+        <button class="play_again_btn play_again_winner">PLAY AGAIN</button>
+    </section>
+
+    <div  class="rules_container">
+        <div class="inner_rules_container">
+            <h3>Game Rules</h3>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+        <button class="close_btn">X</button>
+    </div>
+
+    <button class="rules_btn btn_design next_btn_design ">
+        RULES
+    </button>
+
+    <button id="next_btn" class="next_btn_design btn_design  hidden">
+        NEXT
+    </button>
+<script src="./app.js"></script>
+</body>
+</html>

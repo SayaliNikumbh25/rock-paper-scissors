@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body{
+    background-color: #89c15e;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1.5px;
+}
+
+
+/* --------------------------------------------Header-Section---------------------------------------------------*/
+.container {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  font-size: 1.5rem;
+}
+
+.score,
+span {
+  margin: 0px;
+  background-color: white;
+}
+.display_score {
+  display: flex;
+}
+
+span {
+  font-size: 3rem;
+}
+
+.display_score div {
+  margin: 0px 1rem;
+  width: 130px;
+  box-sizing: border-box;
+  font-size: 17px;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* -------------------------------------------------Choice-Section--------------------------------------------*/
+
+.game_container {
+  position: relative;
+  display: grid;
+  height: 400px;
+  width: 600px;
+  padding: 40px;
+  margin-left: 100px;
+  grid-template-columns: (repeat(2, 1fr));
+  grid-template-areas:
+    "rock scissors"
+    "paper paper";
+  place-items: center;
+  height: 35rem;
+}
+
+.choice_btn[data-choice="paper"] {
+  grid-area: paper;
+}
+.choice_btn[data-choice="scissors"] {
+  grid-area: scissors;
+}
+.choice_btn[data-choice="rock"] {
+  grid-area: rock;
+}
+
+.choice_btn {
+  border: none;
+  outline: none;
+  background-color: #89c15e;
+}
+
+.choice {
+  position: relative;
+  height: 8rem;
+  width: 8rem;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.outer_background {
+  position: relative;
+  height: 11rem;
+  width: 11rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.choice img {
+  background-color: white;
+}
+
+.game_container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 25%;
+  top: 23%;
+  background: url("./images/bg-triangle.svg") no-repeat;
+}
+
+.paper_background_color {
+  background-color: #0074b6;
+}
+
+.rock_background_color {
+  background-color: #ffa943;
+}
+
+.scissors_background_color {
+  background-color: #bd00ff;
+}
+
+/* ---------------------------------------------------Results display---------------------------------------------------*/
+
+.result_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  color: white;
+}
+.results_result {
+  border-radius: 50%;
+}
+
+.result_heading {
+  z-index: 1;
+  padding: 30px 0px 35px 0px;
+}
+
+.display_winner {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  margin: 100px;
+}
+
+.display_result {
+  text-align: center;
+}
+
+.winner_heading{
+
+    margin-bottom: 20px;
+}
+
+
+
+/*------------------------------------------------winner container----------------------------------------------*/
+
+.winner_container{
+    position: relative;
+    width: 700px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    color: white;
+    box-sizing: border-box;
+}
+
+.background_container{
+    height: 40%;
+    width: 100%;
+    background-image: url(./images/winner_background.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px 50px 20px;
+}
+
+.winner_container h1{
+    font-size: 6rem;
+}
+.winner_container h3{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* ------------------------------------------------- rules/ next/ play again button ---------------------------------------------*/
+
+.rules_btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 10rem;
+  
+}
+
+.next_btn_design{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: none;
+    outline: none;
+    
+}
+
+.btn_design{
+    width: 120px;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background: none;
+    outline: none;
+}
+
+.play_again_btn{
+    width: 150px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: white;
+    color: #6B6B6B;
+    font-size: 15px;
+    
+}
+
+/*--------------------------------------- Styling for game rules -------------------------------------------*/
+.rules_container {
+  position: absolute;
+  bottom: 7rem;
+  right: 2rem;
+  box-sizing: border-box;
+  height: 350px;
+  width: 300px;
+  padding: 20px;
+  border: 8px solid white;
+  border-radius: 20px;
+  background-color: #004429;
+  color: white;
+  visibility: hidden;
+  
+ 
+}
+.rules_container h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: lighter;
+  padding-bottom: 10px;
+}
+
+.inner_rules_container{
+    background-color: #004429;
+    text-transform: none;
+    
+}
+
+ul {
+  list-style-type: square; 
+  padding-left: 20px;
+}
+ul li {
+  font-weight: lighter;
+  font-size: 14px;
+}
+li::marker {
+  color: #ffd600;
+  font-size: 25px;
+}
+
+.close_btn {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  margin: -30px;
+  top: 0;
+  right: 0;
+  background-color: #ff0000;
+  border: 7px solid white;
+  border-radius: 50%;
+  font-size: 40px;
+  font-family: "Dangrek", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  box-sizing: border-box;
+}
+
+/*------------------------------------------------Utilities-----------------------------------------------------*/
+.rule_btn_invisible {
+  visibility: visible;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.winner {
+    box-shadow: 0 0 0 30px #63983b, 0 0 0 60px #6faa42, 0 0 0 90px #7cba4c;
+  }
+
+.shadow{
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.innerShadow{
+    box-shadow: inset 0 2px 15px 0 rgba(0, 0, 0, 0.2), inset 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
